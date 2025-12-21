@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <title>Minecraft Jar - downloads</title>
+   <link rel="icon" href="assets/jar.png" />
+
+   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="menu.css" />
+</head>
+
+<body>
+   <header class="top-navbar">
+      <div class="brand">
+         <img src="assets/basic.svg" alt="logo" class="logo" />
+         <a href="/Jump-to-Datapack/" class="home-btn" id="home-btn">
+            <p>점프 투 데이터 팩</p>
+         </a>
+      </div>
+      <nav class="nav-left-btn menu-btn">
+         <a></a>
+         <a href="https://www.minecraft.net/" target="_blank">공식 사이트</a>
+         <a href="https://minecraft.wiki" target="_blank">위키</a>
+         <a href="https://bugs.mojang.com/browse/MC" target="_blank">버그 제보</a>
+         <a href="https://www.mcc-gadgets.com/java/changelog" target="_blank">버전 역사</a>
+      </nav>
+      <div class="menu-container">
+         <button class="menu-btn dropdown-btn">☰</button>
+         <div class="dropdown-menu">
+            <a href="https://mcstacker.net/" title="명령어 관련 도구" target="_blank">MCStacker</a>
+            <a href="https://misode.github.io/" title="데이터 팩 관련 도구" target="_blank">Datapack Generators</a>
+            <a href="https://cccode.pages.dev/version-diff/" title="특정 버전과의 차이를 시각적으로 표시합니다." target="_blank">Version
+               Diff</a>
+            <a href="https://mcsrc.dev/" title="소스 코드 웹 뷰어" target="_blank">Code Web Viewer</a>
+            <a href="https://bdengine.app/" title="디스플레이 엔티티로 모델링 작업을 수행할 수 있습니다." target="_blank">BDEngine</a>
+         </div>
+      </div>
+   </header>
+   <div id="progress-bar"></div>
+   <div class="app">
+      <!-- 상단 블록: jar 다운로드 -->
+      <div class="card block" id="jar-search">
+         <h2>Jar 다운로드</h2>
+
+         <!-- 종류 선택 -->
+         <div>
+            <label for="jar-type">Jar 종류</label>
+            <select id="jar-type" class="jql-input">
+               <option value="client">client</option>
+               <option value="server">server</option>
+               <option value="both">both</option>
+            </select>
+         </div>
+
+         <!-- 버전 선택기 -->
+         <div class="version-selector">
+            <label for="minecraft-version">버전</label>
+            <input type="text" id="minecraft-version" class="jql-input" placeholder="버전 입력 또는 선택..."
+               autocomplete="off" />
+            <ul id="version-list" class="version-list"></ul>
+         </div>
+
+         <div style="margin-top:12px;">
+            <button id="jar-download">다운로드</button>
+         </div>
+      </div>
+   </div>
+
+   <script src="app.js"></script>
+   <script src="menu.js"></script>
+</body>
+
+</html>

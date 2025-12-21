@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="800px" height="800px" viewBox="0 0 52 52" xml:space="preserve">
+  <!-- Menu icon matching jtd.svg size and style -->
+  <g fill="#836FFF">
+    <!-- three rounded bars -->
+    <rect x="8" y="12" rx="2.5" ry="2.5" width="36" height="4.5"/>
+    <rect x="8" y="23" rx="2.5" ry="2.5" width="36" height="4.5"/>
+    <rect x="8" y="34" rx="2.5" ry="2.5" width="36" height="4.5"/>
+  </g>
+</svg>

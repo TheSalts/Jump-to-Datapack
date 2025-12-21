@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+
+<script>if (!location.hash) { location.replace(location.pathname + "#1"); }</script>
+
+<!-- 문서 헤드 -->
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <title>Jump to - datapack</title>
+   <link rel="icon" href="assets/icon.png" />
+
+   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" />
+   <link rel="stylesheet" href="menu.css" />
+   <link rel="stylesheet" href="code.css" />
+</head>
+
+<!-- 로딩 화면 -->
+<div id="page-loading" style="display: none;" class="page-loading">
+   <img src="assets/gif/loading.gif" alt="로딩 중" style="width:140px; height:140px; margin-bottom:16px;">
+   <div class="page-loading">페이지 로딩 중...</div>
+</div>
+
+<!-- 상단 내비게이션 바 -->
+<header class="top-navbar">
+   <div class="brand">
+      <img src="assets/basic.svg" alt="logo" class="logo" />
+      <a href="#1" class="home-btn" id="home-btn">
+         <p>점프 투 데이터 팩</p>
+      </a>
+   </div>
+   <nav class="nav-left-btn menu-btn">
+      <a></a>
+      <a href="https://www.minecraft.net/" target="_blank">공식 사이트</a>
+      <a href="https://minecraft.wiki" target="_blank">위키</a>
+      <a href="https://bugs.mojang.com/browse/MC" target="_blank">버그 제보</a>
+      <a href="https://www.mcc-gadgets.com/java/changelog" target="_blank">버전 역사</a>
+      <a href="#1" id="latest-version">최신 버전: </a>
+   </nav>
+   <div class="menu-container">
+      <button class="menu-btn dropdown-btn">☰</button>
+      <div class="dropdown-menu">
+         <a href="/Jump-to-Datapack/jar.html" title=".jar 파일 다운로드">Jar File</a>
+         <a href="https://mcstacker.net/" title="명령어 관련 도구" target="_blank">MCStacker</a>
+         <a href="https://misode.github.io/" title="데이터 팩 관련 도구" target="_blank">Datapack Generators</a>
+         <a href="https://cccode.pages.dev/version-diff/" title="특정 버전과의 차이를 시각적으로 표시합니다." target="_blank">Version
+            Diff</a>
+         <a href="https://mcsrc.dev/" title="소스 코드 웹 뷰어" target="_blank">Code Web Viewer</a>
+         <a href="https://bdengine.app/" title="디스플레이 엔티티로 모델링 작업을 수행할 수 있습니다." target="_blank">BDEngine</a>
+         <a href="#0/credits" title="크레딧">Credits</a>
+      </div>
+   </div>
+</header>
+
+<!-- 본문 -->
+
+<body>
+   <div id="progress-bar"></div>
+   <div class="app">
+      <aside class="sidebar">
+
+         <input id="q" class="search" placeholder="/ 키로 빠른 검색 혹은 직접 검색" />
+
+         <nav id="pages" class="pages"></nav>
+         <footer class="footer">
+            Font: MineCrafter by PurePixel / MadPixel Licensed under Creative Commons (Non-Commercial)
+         </footer>
+      </aside>
+
+      <main class="content">
+         <header class="article-head">
+            <h2 id="title">페이지 로딩 중...</h2>
+            <div id="subtitle" class="subtitle"></div>
+         </header>
+
+         <article id="article" class="article">페이지를 선택하세요.</article>
+      </main>
+   </div>
+
+   <!-- 스크립트 -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+   <script>
+      Prism.plugins.autoloader.languages_path =
+         "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/";
+   </script>
+
+   <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+      window.mermaid = mermaid;
+      mermaid.initialize({
+         startOnLoad: false,
+         theme: "base",
+         themeVariables: {
+            /* 기본 배경, 글자 */
+            primaryColor: "#0f1724",
+            primaryTextColor: "#e6eef8",
+            primaryBorderColor: "#5a7bffbb",
+
+            /* 노드 색상 */
+            nodeTextColor: "#e6eef8",
+            tertiaryColor: "#1e2a47",
+            secondaryColor: "#151d32",
+
+            /* 화살표 */
+            edgeLabelBackground: "#0b1220",
+            arrowheadColor: "#8d85ee",
+
+            /* 상태(hover/active)*/
+            noteBkgColor: "#1e2a47aa",
+            noteTextColor: "#d0d8ff",
+            noteBorderColor: "#5a4bff",
+
+            clusterBkg: "#0b1220",
+            clusterBorder: "#5a4bff55",
+
+            textColor: "#e6eef8",
+
+            activationBorderColor: "#d1b3ff88",
+            activationBkgColor: "#5a4bff33",
+
+            lineColor: "#ffffff",
+            arrowheadColor: "#d1b3ff",
+            edgeLabelBackground: "#1a1a2eaa",
+         }
+      });
+   </script>
+   <script src="app.js"></script>
+   <script src="menu.js"></script>
+   <script src="prism-mcfunction.js"></script>
+</body>
+
+
+</html>
